@@ -1,0 +1,28 @@
+def split(s, length):
+
+	if length < 0:
+			return 'error'
+
+	elif length > len(s):
+			return s
+
+	elif length == 0:
+			return ''
+
+	i = 0
+	r = []
+	sub = ''
+	while i < len(s):
+					 if i+length > len(s):
+					 		sub = s[i:len(s)]
+					 else:
+					 		sub = s[i:i+length]
+
+					 if not r:
+					 		r.append(sub)
+					 else:
+					 		r.append(", " + sub)
+
+					 i+=length 
+
+	return r
